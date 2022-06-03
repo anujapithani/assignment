@@ -1,0 +1,19 @@
+<%= form_tag '/login' do %>
+<section class="vh-100 bg-success">
+  <div class="container h-100">
+    <div class="row align-items-center h-100 p-5">
+      <div class="form-outline p-5">
+                  <%= label_tag 'Username'%>
+                  <%= text_field_tag :name, params[:name] %>
+            </div>
+            <div class="form-outline p-5">
+                  <%= label_tag 'Password'%>
+                  <%= password_field_tag :password %>
+            </div>
+            <div class="form-outline p-5">
+                  <%= submit_tag "Log In" %>
+            </div>
+            </div>
+      </div>
+</section>
+<% end %>
