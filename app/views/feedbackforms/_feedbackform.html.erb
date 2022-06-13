@@ -13,7 +13,7 @@
                                 <tbody>
                                     <% @feedbackforms.each do |f| %>
                                     <tr>
-                                        <td><%= f.name %></td>
+                                        <td><%= f.name.capitalize() %></td>
                                         <td><%= f.rating%></td>
                                         <td><%= f.comments%></td>
                                     </tr>
