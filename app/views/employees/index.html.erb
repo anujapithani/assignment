@@ -10,7 +10,7 @@
       <div class="container-fluid">
         <div class="container">
           <%= form_with scope: :employee, url: employees_path, local: true do |form| %>
-          <h1>Employee registration</h1>
+          <h1>Employee Registration</h1>
           <div class="form-group p-2">
             <strong><%= form.label :name %></strong><br>
             <%= form.text_field :name, class:'form-control' %>

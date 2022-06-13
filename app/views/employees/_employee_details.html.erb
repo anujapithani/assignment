@@ -1,0 +1,25 @@
+<div class="col-md-6 col-xl-6">
+                    <div class="card" id="tooltip-container3">
+                        <div class="card-body ">
+                            <h5>Employee Details</h5>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Employeeid</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% @employees.each do |e| %>
+                                    <tr>
+                                        <td><%= e.name %></td>
+                                        <td><%= e.email%></td>
+                                        <td><%= e.empid%></td>
+                                    </tr>
+                                    <% end %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>

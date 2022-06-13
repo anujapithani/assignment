@@ -51,21 +51,25 @@ class StudentsController < ApplicationController
             end
         
           end
-        
-        
-        
-          def destroy
-        
-            @student =Student.find(params[:id])
-        
-            @student.destroy
-        
-            flash[:note] = "delete record succesfully"
-           
-            redirect_to students_path
+          def show
+
+            @student = Student.find(params[:id])
         
           end
+
+          def destroy
+
+            @student =Student.find(params[:id])
+      
+            @student.destroy
+            flash[:note] = "delete record succesfully"
+
+            redirect_to  "/"
+      
+          end
+            
         
+          
         
         
         private

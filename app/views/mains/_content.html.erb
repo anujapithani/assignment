@@ -23,86 +23,15 @@
 
 
             <div class="row">
-                <div class="col-md-6 col-xl-6">
-                    <div class="card" id="tooltip-container">
-                        <div class="card-body">
-                            <h5>student_details</h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">email</th>
-                                        <th scope="col">studentid</th>
-                                        <th scope="col">edit</th>
-                                        <th scope="col">delete</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% @students.each do |r| %>
-                                    <tr>
-                                        <td><%= r.name %></td>
-                                        <td><%= r.email%></td>
-                                        <td><%= r.studentid%></td>
-                                        <td><%= link_to "edit", edit_student_path(r.id) %></td>
-                                        <td><%= button_to 'Delete',student_path(@student),  method: :delete %></td>
-                                    </tr>
-                                    <% end %>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                    
 
-                <div class="col-md-6 col-xl-4">
-                    <div class="card" id="tooltip-container1">
-                        <div class="card-body">
-                            <h5>feedback_details</h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Rating</th>
-                                        <th scope="col">Comments</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% @feedbackforms.each do |f| %>
-                                    <tr>
-                                        <td><%= f.name %></td>
-                                        <td><%= f.rating%></td>
-                                        <td><%= f.comments%></td>
-                                    </tr>
-                                    <% end %>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-6">
-                    <div class="card" id="tooltip-container3">
-                        <div class="card-body ">
-                            <h5>employee_details</h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">email</th>
-                                        <th scope="col">employeeid</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% @employees.each do |e| %>
-                                    <tr>
-                                        <td><%= e.name %></td>
-                                        <td><%= e.email%></td>
-                                        <td><%= e.empid%></td>
-                                    </tr>
-                                    <% end %>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+       <%= render "students/student_details" %>         
+       <%= render "feedbackforms/feedbackform" %>         
+       <%= render "admins/weather_report" %>         
+       <%= render "employees/employee_details" %>         
+
+                
+                
             </div>
             <!-- end row -->
 

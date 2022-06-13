@@ -75,3 +75,4 @@ end
 gem 'forecast_io'
 gem 'figaro'
 gem 'httparty'
+gem 'turbolinks'
