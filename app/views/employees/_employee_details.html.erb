@@ -13,7 +13,7 @@
                                 <tbody>
                                     <% @employees.each do |e| %>
                                     <tr>
-                                        <td><%= e.name %></td>
+                                        <td><%= e.name.capitalize() %></td>
                                         <td><%= e.email%></td>
                                         <td><%= e.empid%></td>
                                     </tr>
