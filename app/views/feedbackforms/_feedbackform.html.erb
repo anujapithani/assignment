@@ -1,25 +1,25 @@
 <div class="col-md-6 col-xl-5">
-                    <div class="card" id="tooltip-container1">
-                        <div class="card-body">
-                            <h5>Feedback Details</h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Rating</th>
-                                        <th scope="col">Comments</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% @feedbackforms.each do |f| %>
-                                    <tr>
-                                        <td><%= f.name.capitalize() %></td>
-                                        <td><%= f.rating%></td>
-                                        <td><%= f.comments%></td>
-                                    </tr>
-                                    <% end %>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+    <div class="card" id="tooltip-container1">
+        <div class="card-body">
+            <h5>Feedback Details</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @feedbackforms.each do |f| %>
+                    <tr>
+                        <td><%= f.name.capitalize() %></td>
+                        <td><%= f.rating%></td>
+                        <td><%= f.comments%></td>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

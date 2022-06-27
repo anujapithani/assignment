@@ -1,15 +1,16 @@
-
-                <div class="col-md-6 col-xl-7">
-                    <div class="card" id="tooltip-container">
-                        <div class="card-body bg-light">
-                        <h5>Weather Report</h5>
-
-                                        <p><strong>City: </strong><%= @query %></p>
-                                        <p><strong>wind Speed: </strong><%= @wind_speed %></p>
-                                        <p><strong>precip: </strong><%= @precip %></p>
-                                        <p><strong>Pressure: </strong><%= @pressure %></p>
-                                        <p><strong>Humidity: </strong><%= @humidity %></p>
-                                        <p><strong>Visibility: </strong><%= @visibility %></p>
-                        </div>
-                    </div>
-                </div>
+<div class="col-md-6 col-xl-6">
+   <div class="card" id="tooltip-container">
+        <div class="card-body bg-light">
+            <h5>Weather Report</h5>
+                <p><strong>City: </strong><%= @query %></p>
+                <p><strong>wind Speed: </strong><%= @wind_speed %></p>
+                 <p><strong>Temperature: </strong><%= @temperature %></p>
+                <p><strong>precip: </strong><%= @precip %></p>
+                <p><strong>Pressure: </strong><%= @pressure %></p>
+                <p><strong>Humidity: </strong><%= @humidity %></p>
+                <p><strong>Visibility: </strong><%= @visibility %></p>
+                <p><strong>Cloudcover: </strong><%= @cloudcover %></p>
+                <p><strong>Feelslike: </strong><%= @feelslike %></p>
+        </div>
+    </div>
+</div>

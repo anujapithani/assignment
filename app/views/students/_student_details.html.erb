@@ -1,35 +1,29 @@
-    <div class="col-md-6 col-xl-7">
-                        <div class="card" id="tooltip-container">
-                            <div class="card-body">
-                                <h5>Student Details</h5>
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Student Id</th>
-                                            <th scope="col">Edit</th>
-                                            <th scope="col">Delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <% @students.each do |student| %>
-                                        <tr>
-                                            <td><%= student.name.capitalize() %></td>
-                                            <td><%= student.email%></td>
-                                            <td><%= student.studentid%></td>
-                                            <td><%= link_to "Edit", edit_student_path(student) %></td>
-                                            <%# <td><%= link_to 'Delete', student_path(student.id), data: { turbo_method: :delete } %></td> 
-                                            <%# <td><%= link_to 'Delete', [comment.student, comment], data: { turbo_method: :delete, turbo_confirm: 'are you sure?' }, class: 'button is-danger' %></td>
-                                            <%# <td><%= link_to 'Delete',student_path(student.id),method: :delete,data: { confirm: 'Are you sure?' } %></td> 
-                                            <td><%= button_to 'Delete',  "/student/#{student.id}",  method: :delete %></td>
-                                            <%# <% <td><%= link_to 'Delete', students_path(student.id), data: { turbo_method: :delete } %></td>  
-                                            <%# <% <td><%= link_to "edit", edit_student_path(r.id) %></td> 
-                                            <%# <td><%= link_to 'Delete', student_path(student.id), data: { turbo_method: :delete } %></td> 
-                                        </tr>
-                                        <% end %>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+<div class="col-md-6 col-xl-7">
+    <div class="card" id="tooltip-container">
+        <div class="card-body">
+            <h5>Student Details</h5>
+            <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Student Id</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% @students.each do |student| %>
+                <tr>
+                    <td><%= student.name.capitalize() %></td>
+                    <td><%= student.email%></td>
+                    <td><%= student.studentid%></td>
+                    <td><%= link_to "Edit", edit_student_path(student) %></td>
+                    <td> <%= button_to 'Delete',  "/students/#{student.id}",  method: :delete %></td>
+                </tr>
+                <% end %>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>

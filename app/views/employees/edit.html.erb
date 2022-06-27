@@ -1,30 +1,35 @@
  <div id="wrapper">
-   <%= render "mains/navbar" %>
-   <%= render "mains/sidebar" %>
-   <div class="content-page">
-     <div class="content">
+    <%= render "mains/navbar" %>
+    <%= render "mains/sidebar" %>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="container">
+          
+              <h2>edit page</h2>
+              <%= form_with(model: @employee, local: true) do |form| %>
+              <h1>Employee registration</h1>
 
-       <!-- Start Content-->
-       <div class="container-fluid">
-         <div class="container">
-           <h2>edit page</h2>
+          <div class="form-group p-2">
+              <strong><%= form.label :name %></strong><br>
+              <%= form.text_field :name, class:'form-control' %>
+           </div>
 
-           <%= form_with(model: @employee, local: true) do |form| %>
-           <h1>Employee registration</h1>
            <div class="form-group p-2">
-             <strong><%= form.label :name %></strong><br>
-             <%= form.text_field :name, class:'form-control' %>
+              <strong><%= form.label :email %></strong><br>
+              <%= form.email_field :email, class: 'form-control' %>
            </div>
+
            <div class="form-group p-2">
-             <strong><%= form.label :email %></strong><br>
-             <%= form.email_field :email, class: 'form-control' %>
+              <strong><%= form.label :empid %></strong><br>
+              <%= form.text_field :empid, class: 'form-control' %>
            </div>
+
            <div class="form-group p-2">
-             <strong><%= form.label :empid %></strong><br>
-             <%= form.text_field :empid, class: 'form-control' %>
+              <%= form.submit :register, class: 'form-control btn-light' %>
            </div>
-           <div class="form-group p-2">
-             <%= form.submit :register, class: 'form-control btn-light' %>
-           </div>
-           <% end %>
-         </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

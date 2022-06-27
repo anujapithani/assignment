@@ -1,12 +1,10 @@
 <% if current_admin %>
-<div id="wrapper">
-    <%= render "mains/navbar" %>
-    <%= render "mains/sidebar" %>
-    <%= render "mains/content" %>
-</div>
-<#%= link_to 'Logout' , '/logout' , :data=> { :confirm => 'Are you sure?' }%>
-    <% else %>
-    <%= link_to 'Signup', '/signup'%>
+    <div id="wrapper">
+        <%= render "admins/navbar" %>
+        <%= render "admins/sidebar" %>
+        <%= render "admins/content" %>
+    </div>
+<% else %>
+    <%= link_to 'Signup', '/signup'%><br>
     <%= link_to 'Login', '/login'%>
-
-    <% end %>
+<% end %>

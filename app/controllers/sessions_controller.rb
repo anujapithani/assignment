@@ -1,8 +1,5 @@
 class SessionsController < ApplicationController
   def new
-    @feedbackforms = Feedbackform.all
-    @employees = Employee.all
-    @students = Student.all
   end
 
   def create
@@ -14,8 +11,8 @@ class SessionsController < ApplicationController
     else
       flash[:notice]="Invalid Email or Password"
       redirect_to '/login'
+    end
   end
-end
 
   def destroy
     session[:admin_id] = nil

@@ -4,19 +4,19 @@
 
 <%= form_for :admin, url: '/admin' do |form| %>
 <div id="signup">
-        <div class="container">
-            <div id="signup-row" class="row justify-content-center align-items-center">
-                <div id="signup-column" class="col-md-6">
-                    <div id="signup-box" class="col-md-12">
-                            <h3 class="text-center">SignUp</h3>
-<div>
-        <% if flash[:notice].present?%>
-        <%flash[:notice].each do |message| %>
-        <p class="text-danger"><%= message %></p>
-        <%end%>
-        <%end%>
-</div>
-
+   <div class="container pt-3">
+       <div id="signup-row" class="row justify-content-center align-items-center">
+          <div id="signup-column" class="col-md-6">
+              <div id="signup-box" class="col-md-12">
+                <h3 class="text-center pb-3">SignUp</h3>
+                <div>
+                   <% if flash[:notice].present?%>
+                        <%flash[:notice].each do |message| %>
+                        <p class="text-danger"><%= message %></p>
+                   <%end%>
+                   <%end%>
+                </div>
+                
 <div class="form-group">
         <strong><%= form.label :user_Name %></strong><br>
         <%= form.text_field :user_name, class: 'form-control' %>

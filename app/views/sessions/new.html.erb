@@ -3,30 +3,34 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <%= form_tag '/login' do %>
- <div id="login">
-        <div class="container">
-            <div id="login-row" class="row justify-content-center align-items-center">
-                <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12">
-                            <h3 class="text-center">Login</h3>
-<div>
-      <%= flash[:notice] if flash[:notice]%>
-</div>
-<div class="form-group">
-      <%= label_tag 'User Name'%><br>
-      <%= text_field_tag :name, params[:name], class: 'form-control' %>
-</div>
-<div class="form-group">
-      <%= label_tag 'Password'%><br>
-      <%= password_field_tag :password, params[:password], class: 'form-control'%>
-</div>
+<div id="login">
+  <div class="container pt-4">
+      <div id="login-row" class="row justify-content-center align-items-center">
+          <div id="login-column" class="col-md-6">
+            <div id="login-box" class="col-md-12">
+               <h3 class="text-center pb-3">Login</h3>
 
-<div class="form-group">
-      <%=  submit_tag "Log In", class: 'form-control-btn-dark'%>
-</div>
-</div>
-</div>
-</div>
-</div>
+               <div>
+                  <%= flash[:notice] if flash[:notice]%>
+               </div>
+
+               <div class="form-group">
+                  <%= label_tag 'User Name'%><br>
+                  <%= text_field_tag :name, params[:name], class: 'form-control' %>
+               </div>
+
+               <div class="form-group">
+                  <%= label_tag 'Password'%><br>
+                  <%= password_field_tag :password, params[:password], class: 'form-control'%>
+               </div>
+
+               <div class="form-group">
+                  <%=  submit_tag "Log In", class: 'form-control-btn-dark'%>
+               </div>
+            <%= link_to 'Signup', '/signup'%>
+         </div>
+       </div>
+     </div>
+    </div>
 </div>
 <% end %>
